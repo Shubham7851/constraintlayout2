@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- First Line: Three Icons -->
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon2"
+        app:layout_constraintEnd_toStartOf="@+id/icon2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon1"
+        app:layout_constraintEnd_toStartOf="@+id/icon3"
+        app:layout_constraintStart_toEndOf="@+id/icon1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/icon3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Second Line: Two Boxes and Arrow Icon in Center -->
+    <View
+        android:id="@+id/box1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon1"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/box1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DCA"
+        android:textSize="30sp"
+        android:textColor="#E8ECED"
+        app:layout_constraintTop_toTopOf="@id/box1"
+        app:layout_constraintStart_toStartOf="@id/box1"
+        app:layout_constraintEnd_toEndOf="@id/box1"
+        app:layout_constraintBottom_toBottomOf="@id/box1"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintEnd_toStartOf="@+id/box2"
+        app:layout_constraintStart_toEndOf="@+id/box1"
+        app:layout_constraintTop_toTopOf="@id/box1"
+        app:layout_constraintBottom_toBottomOf="@id/box1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <View
+        android:id="@+id/box2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arrow"
+        app:layout_constraintTop_toBottomOf="@id/icon1"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/box2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MARS"
+        android:textSize="30sp"
+        android:textColor="#E8ECED"
+        app:layout_constraintTop_toTopOf="@id/box2"
+        app:layout_constraintStart_toStartOf="@id/box2"
+        app:layout_constraintEnd_toEndOf="@id/box2"
+        app:layout_constraintBottom_toBottomOf="@id/box2"
+        android:gravity="center"/>
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/box1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="One Way"
+        android:textColor="#000000"
+        android:checked="false"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:background="#CD2424"/>
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/switch1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="One traveller"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:background="#CD2424"
+        android:textSize="30sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
